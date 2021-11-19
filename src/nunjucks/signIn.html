@@ -1,0 +1,15 @@
+{% extends '_baseSign.html'%}
+{% set text="Do not have an account?"%}
+{% set page="Sign up" %}
+{% set href="./signUp.html" %}
+{% set description="Sign in" %}
+{% block content %}
+  <nav class='input-index'>
+    <input type="text" placeholder="Email">
+    <input type="text" placeholder="Password">
+  </nav>
+  <nav class='button'>
+    <a href="./forgot-password.html" class="link-form">Forgot password?</a>
+    <button class='sign-in'>Sign in</button>
+  </nav>
+{% endblock %}
