@@ -40,10 +40,20 @@ header {
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin-left: 45vw;
             .fas {
                 color: rgb(196, 194, 194);
                 font-size: 20px;
+            }
+        }
+        .lang{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-left: 39vw;
+            margin-right: 2vw;
+            a{
+                margin-right: 10%;
             }
         }
         input {
@@ -109,13 +119,36 @@ footer {
     }
 }
 
+.about-us{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: 3vh;
+    .about-us-text{
+        display: flex;
+        flex-direction: column;
+        margin-right: 3vw;
+        p, form{
+            margin-top: 2vh;
+        }
+        p, li{
+            font-size: 24px;
+        }
+    }
+    .snitch-img {
+        float:left; /* Выравнивание по левому краю */
+        margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+       }
+}
+
 table,
 tr,
 td {
     border: 1px solid black;
 }
 
-html * p {
+html * p, html * li {
     color: rgb(112, 112, 112);
 }
 
@@ -143,6 +176,8 @@ b+i {
 .lists {
     list-style-type: square;
 }
+
+
 
 #post {
     display: flex;
@@ -179,6 +214,15 @@ b+i {
                     .head-text {
                         font-size: 26px;
                         font-weight: 600;
+                    }
+                    .additions{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        .checkbox{
+                            position: absolute;
+                            left: -1999px; 
+                        }
                     }
                 }
             }
@@ -427,6 +471,14 @@ input[type="button"] {
 
 #wg-api-football-standings {
     margin-top: 2vh;
+}
+
+#click{
+    color: red !important;
+}
+
+#unclick {
+    color: rgb(112, 112, 112);
 }
 
 // input {

@@ -11,9 +11,17 @@
             <p class="description">Manchester City playmaker Kevin de Bruyne tests positive for Covid-19 on his return
               from international duty with Belgium.</p>
           </nav>
-          <nav>
-            <i class="fas fa-futbol"></i>
-            <a class="extra">Man City</a>
+          <nav class="additions">
+            <nav class="additions-one">
+              <i class="fas fa-futbol"></i>
+              <a class="extra">Man City</a>
+            </nav>
+            <nav class="additions-two">
+              <input type="checkbox" id="likech" class="checkbox checkbox1"><label for="likech" class="label1"><i
+                  class="fas fa-heart"></i></label>
+              <input type="checkbox" id="dislikech" class="checkbox checkbox2"><label for="dislikech" class="label2"><i
+                  class="fas fa-heart-broken"></i></label>
+            </nav>
           </nav>
         </nav>
       </nav>
@@ -177,11 +185,14 @@
       </nav>
       <nav class="video">
         <img src="images/kolesnik.jpg">
-        <a href="https://www.youtube.com/watch?v=hK5nmWcimNg&ab_channel=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA">New Barça in Winter</a>
+        <a
+          href="https://www.youtube.com/watch?v=hK5nmWcimNg&ab_channel=%D0%90%D0%BD%D0%B4%D1%80%D0%B5%D0%B9%D0%9A%D0%BE%D0%BB%D0%B5%D1%81%D0%BD%D0%B8%D0%BA">New
+          Barça in Winter</a>
       </nav>
       <nav class="video">
         <img src="images/aoc.jpg">
-        <a href="https://www.youtube.com/watch?v=ruKyT8SXAIo&ab_channel=BBCSport">Alex Oxlade-Chamberlain owes goalkeeper Alisson's gloves after skills challenge</a>
+        <a href="https://www.youtube.com/watch?v=ruKyT8SXAIo&ab_channel=BBCSport">Alex Oxlade-Chamberlain owes
+          goalkeeper Alisson's gloves after skills challenge</a>
       </nav>
     </nav>
   </nav>
@@ -196,4 +207,39 @@
     <img src="images/63766060341598.jpg" id="griezmann">
   </div> -->
 </nav>
+<script>
+  const like = document.querySelector("#likech");
+  const label1 = document.querySelector(".fa-heart");
+  const label2 = document.querySelector(".fa-heart-broken");
+  const dislike = document.querySelector("#dislikech");
+
+  like.addEventListener("change", () => {
+    if (!label1.id) {
+      label1.setAttribute('id', 'click')
+      label2.setAttribute('id', 'unclick')
+      return
+    }
+    if(label1.id === 'unclick') {
+      label1.setAttribute('id', 'click')
+      label2.setAttribute('id', 'unclick')
+      return
+    }
+    label1.removeAttribute('id')
+    label1.setAttribute('id', 'unclick')
+  })
+  dislike.addEventListener('change', () => {
+    if (!label2.id) {
+      label1.setAttribute('id', 'unclick')
+      label2.setAttribute('id', 'click')
+      return
+    }
+    if(label2.id === 'unclick') {
+      label1.setAttribute('id', 'unclick')
+      label2.setAttribute('id', 'click')
+      return
+    }
+    label2.removeAttribute('id')
+    label2.setAttribute('id', 'unclick')
+  })
+</script>
 {% endblock %}
